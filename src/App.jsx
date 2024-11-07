@@ -4,13 +4,14 @@ import map from "./assets/map.png";
 
 function App() {
   const [value, setValue] = useState("1");
+  const [uploadImg, setUploadImg] = useState(null);
 
+  // Manage Button Switch
   const manageTab = (newValue) => {
     setValue(newValue);
   };
 
-  const [uploadImg, setUploadImg] = useState(null);
-
+  // Handle Upload Image
   const handleUploadImg = (e) => {
     const file = e.target.files[0];
     if (file) {
@@ -30,6 +31,7 @@ function App() {
         <h2 className="text-center mb-16 text-blue-600 font-bold text-5xl underline">
           Image Change :
         </h2>
+        {/* Image Start*/}
         <div className="h-[300px]">
           {value === "1" && (
             <div>
@@ -60,6 +62,9 @@ function App() {
             />
           )}
         </div>
+        {/* Image End*/}
+
+        {/* Button Start */}
         <div className="flex gap-4 mt-8">
           <button
             onClick={() => manageTab("1")}
@@ -104,6 +109,7 @@ function App() {
               />
             </label>
           </div>
+          {/* Button End */}
         </div>
       </div>
     </div>
