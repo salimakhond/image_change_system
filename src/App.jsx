@@ -27,7 +27,7 @@ function App() {
 
   return (
     <div className="w-full h-full my-10">
-      <div className="w-[500px] mx-auto">
+      <div className="container w-[500px] mx-auto">
         <h2 className="text-center mb-16 text-blue-600 font-bold text-5xl underline">
           Image Change :
         </h2>
